@@ -34,13 +34,13 @@ const SongDetails = () => {
               <p key={i} className="text-gray-400 text-base my-1">{line}</p>
             )) : <p className="text-gray-400 text-base my-1">Sorry, no lyrics found!</p>}
         </div>
-      <RelatedSongs
-        data={data}
-        isPlaying={isPlaying}
-        activeSong={activeSong}
-        handlePauseClick={handlePauseClick}
-        handlePlayClick={handlePlayClick}
-      />
+        <RelatedSongs
+          data={data}
+          isPlaying={isPlaying}
+          activeSong={activeSong}
+          handlePauseClick={handlePauseClick}
+          handlePlayClick={handlePlayClick}
+        />
       </div>
     </div>
   );
