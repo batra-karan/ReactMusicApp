@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useSelector } from 'react-redux';
 
 import { Error, Loader, SongCard } from '../components';
@@ -8,8 +7,8 @@ const TopCharts = () => {
   const { activeSong, isPlaying } = useSelector((state) => state.player);
   const { data, isFetching, error } = useGetTopChartsQuery();
 
-  if (isFetching && loading) return <Loader title="Loading top charts!" />;
-  if (error && country) return <Error />;
+  if (isFetching) return <Loader title="Loading top charts!" />;
+  if (error) return <Error />;
 
   return (
     <div className="flex flex-col">
